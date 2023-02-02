@@ -1,0 +1,3 @@
+#!/bin/sh
+
+ag --color --line-number "time" | fzf --delimiter=':' -n 2.. --preview-window '+{2}-/2' --preview 'clp -h {2} {1}' --bind='ctrl-o:execute(vim +{2} {1} < /dev/tty),ctrl-k:execute(kak +{2} {1} < /dev/tty)'
